@@ -166,3 +166,9 @@ The suite runs against an in-memory fake Fastmail (`internal/jmaptest`), so it
 needs no account and no network. It asserts the properties that matter: the
 drain loop terminates, a second run moves nothing, and an `Email/set` body
 contains `mailboxIds` patches and nothing else.
+
+## License
+
+Public domain. This software is released under [the Unlicense](LICENSE) — copy,
+modify, sell, or redistribute it for any purpose, with no conditions and no
+attribution required.
