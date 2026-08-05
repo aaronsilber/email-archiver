@@ -167,6 +167,11 @@ needs no account and no network. It asserts the properties that matter: the
 drain loop terminates, a second run moves nothing, and an `Email/set` body
 contains `mailboxIds` patches and nothing else.
 
+## AI use disclosure
+
+This tool is nearly 100% AI-written, by Claude Opus 5, prompted by Aaron
+Silber. Security and safety reviewed by GPT-5.5.
+
 ## License
 
 Public domain. This software is released under [the Unlicense](LICENSE) — copy,
