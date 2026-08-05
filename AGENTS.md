@@ -49,3 +49,13 @@ Open. Choose based on the quality of the available JMAP/IMAP libraries, not fami
 ## Definition of done
 
 A user with 15 years of Inbox runs one command, sees a count, confirms, and ends up with everything before the date sitting in Archive — flags intact, read state intact, and the account's total message count unchanged.
+
+## Status
+
+Implemented as of v0.1.0. Settled choices, all within the latitude above:
+
+- **Go**, single binary, zero third-party dependencies — JMAP is JSON over HTTPS, so `net/http` and `encoding/json` cover it.
+- **JMAP only.** The IMAP fallback was not built; it would double the surface area for no gain against Fastmail.
+- **Confirmation prompt by default**, skippable with `--yes`. `--dry-run` never moves anything.
+
+See [README.md](README.md) for usage and [docs/design.md](docs/design.md) for how the constraints above are actually enforced — in particular why the drain loop, not a checkpoint file, is what makes the tool idempotent and resumable.
